@@ -41,4 +41,5 @@ if [ $? -eq 0 ];then
         fi
 fi
 done
+exit 0
 fi
