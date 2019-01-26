@@ -1,6 +1,5 @@
 #!/bin/bash
 source /etc/profile
-
 log(){
 echo `date '+%F %H:%M:$S'` $@ >>/varlog/reboottest.log
 }
@@ -12,5 +11,4 @@ if [ $(ps aux | grep ${process} | grep -v grep |wc -l) -gt 0 ];then
         log ${process} failed;
 fi
 sleep 300
-
-reboot
+/sbin/reboot
