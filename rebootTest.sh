@@ -1,7 +1,7 @@
 #!/bin/bash
 source /etc/profile
 log(){
-echo `date '+%F %H:%M:$S'` $@ >>/varlog/reboottest.log
+echo `date '+%F %H:%M:%S'` $@ >>/var/log/reboottest.log
 }
 sleep 300
 for process in nginx nsdpf mysqld;do
