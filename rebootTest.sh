@@ -10,5 +10,6 @@ if [ $(ps aux | grep ${process} | grep -v grep |wc -l) -gt 0 ];then
         else
         log ${process} failed;
 fi
+done
 sleep 300
 /sbin/reboot
