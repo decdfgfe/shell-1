@@ -4,8 +4,8 @@ mylog(){
          echo `date '+%F %H:%M:%S'` $@ >>/var/log/ftp.log
         }
 failedLogpath=/appslog/log/inbusin/ecenter/fail
-user=sa
-password=sa@1218
+user=username
+password=password
 mac=00-E0-4C-1B-F7-31
 case $1 in
         00)
