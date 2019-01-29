@@ -3,7 +3,7 @@
 # author:wuyang
 # email:dengwuyang@1218.com.cn
 info(){
-	echo -e "\033[31m;$@\033[0m"
+	echo -e "\033[31m$@\033[0m"
 }
 __log(){
 	echo `date '+%F %H:%M:%S'` $@>/tmp/regrtx.log
