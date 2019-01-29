@@ -7,6 +7,9 @@ zipfile=reginfo_rtx.zip
 [ -f $zipfile ] && {
         info "copy ${zipfile} to remote server"
         scp -P 1218 $zipfile rzxsystemuser@192.168.50.95:/tmp/
+}|| {
+        info "$zipfile not exists,Plz get it"
+        exit 1
 }
 info "execute reg.sh"
 ssh rzxsystemuser@192.168.50.95 -p 1218 "cd /tmp/ && bash /apps/rtx/run_env/script/tool/reg.sh"
