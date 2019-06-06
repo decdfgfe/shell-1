@@ -1,0 +1,20 @@
+;Windows 7 右键添加复制文件路径功能
+Windows Registry Editor Version 5.00
+;文件
+[HKEY_CLASSES_ROOT\*\shell\copypath]
+@="复制文件路径"
+[HKEY_CLASSES_ROOT\*\shell\copypath\command]
+;@="mshta vbscript:clipboarddata.setdata(\"text\",\"%1\")(close)"
+;带引号
+;@="cmd.exe /c echo \"%1\"|clip"
+;不带引号
+@="cmd.exe /c echo %1|clip"
+;文件夹
+[HKEY_CLASSES_ROOT\Directory\shell\copypath]
+@="复制文件夹路径"
+[HKEY_CLASSES_ROOT\Directory\shell\copypath\command]
+;@="mshta vbscript:clipboarddata.setdata(\"text\",\"%1\")(close)"
+;带引号
+;@="cmd.exe /c echo \"%1\"|clip"
+;不带引号
+@="cmd.exe /c echo %1|clip"
