@@ -1,4 +1,5 @@
 #!/bin/bash
+#可通过Nat回流解决
 # 解决因内部特殊环境导致审计日志无法正常上传到平台
 mylog(){
          echo `date '+%F %H:%M:%S'` $@ >>/var/log/ftp.log
